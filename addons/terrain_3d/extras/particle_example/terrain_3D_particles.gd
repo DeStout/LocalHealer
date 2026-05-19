@@ -45,7 +45,7 @@ extends Node3D
 		_set_offsets()
 
 
-## Grid width. Must be odd. 
+## Grid width. Must be odd.
 ## Higher values cull slightly better, draw further out.
 @export_range(1, 15, 2) var grid_width: int = 9:
 	set(value):

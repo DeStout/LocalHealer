@@ -1,9 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqtoq6cvjecyj"]
+[gd_scene format=3 uid="uid://bqtoq6cvjecyj"]
 
 [ext_resource type="PackedScene" uid="uid://bll22iruqpsyl" path="res://props/StylizedNature/assets/Bush_Common_Flowers.gltf" id="1_n81tv"]
 [ext_resource type="Material" uid="uid://jxmgrllc6jdj" path="res://props/StylizedNature/Materials/MI_Leaves_Common.tres" id="1_ssxh2"]
 [ext_resource type="Material" uid="uid://bte71i3b83ifd" path="res://props/no_draw.tres" id="3_syjn8"]
 
-[node name="Bush_Common_Flowers" instance=ExtResource("1_n81tv")]
+[sub_resource type="SphereShape3D" id="SphereShape3D_n81tv"]
+radius = 0.001
+
+[node name="Bush_Common_Flowers" unique_id=1399233940 instance=ExtResource("1_n81tv")]
 surface_material_override/0 = ExtResource("1_ssxh2")
 surface_material_override/1 = ExtResource("3_syjn8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0" unique_id=331471581]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1432069173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64431536, 0)
+shape = SubResource("SphereShape3D_n81tv")
+debug_color = Color(1, 0.050000012, 0, 1)

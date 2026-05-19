@@ -7,9 +7,13 @@ const JUMP_VELOCITY = 4.0
 @export var footsteps : AudioStreamPlayer3D
 var step_timer := 0.0
 
+@onready var mesh: MeshInstance3D = $Mesh
+
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+	mesh.visible = false
 
 
 func _input(event: InputEvent) -> void:
@@ -23,7 +27,7 @@ func _input(event: InputEvent) -> void:
 		rotate_y(-Globals.mouse_sensitivity * Globals.zoom_sensitibity * \
 															event.relative.x)
 		rotation.z = 0
-	
+
 	if Input.is_action_just_pressed("Pause"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
