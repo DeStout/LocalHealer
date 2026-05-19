@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxia3rw4k123f"]
+
+[ext_resource type="Material" uid="uid://cwu1hc5pnivip" path="res://props/StylizedNature/Materials/MI_Bark_Birch.tres" id="1_c0tku"]
+[ext_resource type="PackedScene" uid="uid://dmaq40ma0updy" path="res://props/StylizedNature/assets/Birch_1.gltf" id="1_dv1tr"]
+[ext_resource type="Material" uid="uid://bwdysyr0hqcb5" path="res://props/StylizedNature/Materials/MI_Leaves_Birch.tres" id="2_2ufgm"]
+
+[node name="Birch_1" instance=ExtResource("1_dv1tr")]
+surface_material_override/0 = ExtResource("1_c0tku")
+surface_material_override/1 = ExtResource("2_2ufgm")

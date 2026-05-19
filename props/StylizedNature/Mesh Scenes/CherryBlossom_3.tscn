@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdr7a5t8w21kx"]
+
+[ext_resource type="Material" uid="uid://salx13f41xn5" path="res://props/StylizedNature/Materials/MI_Bark_NormalTree.tres" id="1_3vupu"]
+[ext_resource type="PackedScene" uid="uid://46bgcjxmca8j" path="res://props/StylizedNature/assets/CherryBlossom_3.gltf" id="1_s4ptf"]
+[ext_resource type="Material" uid="uid://slb4t4v6tg1q" path="res://props/StylizedNature/Materials/MI_Leaves_CherryBlossom.tres" id="2_4krl4"]
+
+[node name="CherryBlossom_3" instance=ExtResource("1_s4ptf")]
+surface_material_override/0 = ExtResource("1_3vupu")
+surface_material_override/1 = ExtResource("2_4krl4")

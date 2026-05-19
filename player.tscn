@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://cur3b7x4uru83"]
+
+[ext_resource type="Script" uid="uid://cunss15pr1wte" path="res://player/player.gd" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://baah7tkafuxrv" path="res://player/ui.gd" id="2_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://c7s63gj4g4u1m" path="res://sfx/Footstep1.ogg" id="2_sweqy"]
+[ext_resource type="AudioStream" uid="uid://crbflgvqk37r5" path="res://sfx/Footstep2.ogg" id="3_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://dhjmc3r7i5f8" path="res://sfx/Footstep3.ogg" id="4_1jxqw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bcb6e"]
+radius = 0.35
+height = 1.75
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqtel"]
+font_size = 24
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v2m3o"]
+playback_mode = 1
+random_pitch = 1.25
+streams_count = 3
+stream_0/stream = ExtResource("2_sweqy")
+stream_1/stream = ExtResource("3_2hs0m")
+stream_2/stream = ExtResource("4_1jxqw")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("footsteps")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_hqtel")
+footsteps = NodePath("Footsteps")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bcb6e")
+
+[node name="AimHelper" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="AimHelper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+far = 1024.0
+
+[node name="UI" type="Control" parent="AimHelper/Camera" node_paths=PackedStringArray("fps_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2hs0m")
+fps_label = NodePath("FPS")
+
+[node name="FPS" type="Label" parent="AimHelper/Camera/UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = 49.0
+offset_right = -957.0
+offset_bottom = -562.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "FPS: 0"
+label_settings = SubResource("LabelSettings_hqtel")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.875, 0)
+stream = SubResource("AudioStreamRandomizer_v2m3o")
+volume_db = -20.0
+unit_size = 2.0
+pitch_scale = 2.0
+max_polyphony = 2
+bus = &"Footsteps"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkm187r4wwo47"]
+
+[ext_resource type="PackedScene" uid="uid://djpeafn66vyoq" path="res://props/StylizedNature/assets/Bush_Large.gltf" id="1_14gc5"]
+[ext_resource type="Material" uid="uid://crf0mgti7cejm" path="res://props/StylizedNature/Materials/MI_Leaves_Normal.tres" id="1_py2td"]
+
+[node name="Bush_Large" instance=ExtResource("1_14gc5")]
+surface_material_override/0 = ExtResource("1_py2td")

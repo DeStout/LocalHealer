@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn6qugfme6y0d"]
+
+[ext_resource type="PackedScene" uid="uid://b1sg53bwjxn2g" path="res://props/StylizedNature/assets/CommonTree_5.gltf" id="1_toe1a"]
+[ext_resource type="Material" uid="uid://salx13f41xn5" path="res://props/StylizedNature/Materials/MI_Bark_NormalTree.tres" id="1_v2n55"]
+[ext_resource type="Material" uid="uid://jxmgrllc6jdj" path="res://props/StylizedNature/Materials/MI_Leaves_Common.tres" id="2_53lnj"]
+
+[node name="CommonTree_5" instance=ExtResource("1_toe1a")]
+surface_material_override/0 = ExtResource("1_v2n55")
+surface_material_override/1 = ExtResource("2_53lnj")

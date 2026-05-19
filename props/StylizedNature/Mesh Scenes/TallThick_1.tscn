@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://1h0cl8d3qrfq"]
+
+[ext_resource type="Material" uid="uid://c6f3stcwe8j2c" path="res://props/StylizedNature/Materials/MI_Bark_Pine.tres" id="1_2vxhb"]
+[ext_resource type="PackedScene" uid="uid://bgky6rpf3pgs3" path="res://props/StylizedNature/assets/TallThick_1.gltf" id="1_a5n6d"]
+[ext_resource type="Material" uid="uid://d0yummb7ba4aq" path="res://props/StylizedNature/Materials/MI_Leaves_TallThick.tres" id="2_0yibi"]
+
+[node name="TallThick_1" instance=ExtResource("1_a5n6d")]
+surface_material_override/0 = ExtResource("1_2vxhb")
+surface_material_override/1 = ExtResource("2_0yibi")
