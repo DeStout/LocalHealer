@@ -4,10 +4,14 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.0
 
-@export var footsteps : AudioStreamPlayer3D
-var step_timer := 0.0
+@export var footsteps_sfx : AudioStreamPlayer3D
+@export var jump_sfx : AudioStreamPlayer3D
+@export var land_sfx : AudioStreamPlayer3D
 
 @onready var mesh: MeshInstance3D = $Mesh
+
+var step_timer := 0.0
+var was_on_floor : bool = true
 
 
 func _ready() -> void:
@@ -39,18 +43,23 @@ func _process(delta: float) -> void:
 	if velocity and is_on_floor():
 		step_timer += delta
 		if fmod(step_timer, 0.65) <= 0.025:
-			footsteps.play()
+			footsteps_sfx.play()
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
+		was_on_floor = false if was_on_floor else true
 		velocity += get_gravity() * delta
+	elif is_on_floor() and not was_on_floor:
+		was_on_floor = true
+		#land_sfx.play()
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		step_timer = 0.0
+		jump_sfx.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

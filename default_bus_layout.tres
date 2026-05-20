@@ -1,7 +1,13 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://b0oarr5f8v5e"]
 
-[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_j3pel"]
-resource_name = "Filter"
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/32_hz = -60.0
+band_db/100_hz = -40.8
+band_db/320_hz = -24.4
+band_db/1000_hz = -13.4
+band_db/3200_hz = -8.5
+band_db/10000_hz = -4.0
 
 [resource]
 bus/1/name = &"SFX"
@@ -22,5 +28,5 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = &"SFX"
-bus/3/effect/0/effect = SubResource("AudioEffectFilter_j3pel")
+bus/3/effect/0/effect = SubResource("AudioEffectEQ_j3pel")
 bus/3/effect/0/enabled = true

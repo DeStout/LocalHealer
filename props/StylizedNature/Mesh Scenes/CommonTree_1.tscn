@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://hne0ion8s2cq" path="res://props/StylizedNature/assets/CommonTree_1.gltf" id="1_ytgiv"]
 [ext_resource type="Material" uid="uid://jxmgrllc6jdj" path="res://props/StylizedNature/Materials/MI_Leaves_Common.tres" id="2_350fk"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ytgiv"]
-points = PackedVector3Array(1.2070426, 3.0442894, -1.4745849, -0.63772094, 3.8511734, 2.445266, -0.7530991, 3.8511734, 2.445266, 0.7459589, 6.9639816, -1.013181, -1.9060227, 3.505095, -1.4745849, 1.7835044, 3.735972, 1.7533915, -1.329132, 6.271825, 1.4076856, -0.29158652, 2.2364573, 0.60057586, 2.1296387, 5.926221, 0.13917193, -1.9060227, 3.3898935, 1.7533915, -2.021401, 6.0414224, 0.024862222, -0.29158652, 4.658057, -2.2816947, 0.05411899, 5.926221, 1.9838622, -0.63772094, 6.7335787, -1.2441143, 1.6681262, 2.8134124, 0.02439943, 1.8988825, 5.695344, -0.89794564, 1.0916644, 6.9639816, 0.25440723, 0.51520264, 2.697737, -1.5898201, -2.021401, 3.1594908, -0.89794564, -0.8680483, 6.84878, 0.4848778, 0.3998245, 3.274692, 2.0995603, 0.05411899, 2.2364573, -0.6674751, -2.2521572, 5.1188626, 0.13963471, 1.6681262, 6.3870263, 0.6001131, -1.329132, 4.887986, -1.7050555, 0.3998245, 4.312453, -2.1664593, 1.6681262, 3.6207705, -1.2441143, 1.0916644, 6.617903, -1.2441143, 0.28444636, 2.2364573, 0.60057586, -2.021401, 5.234064, 1.061517, 1.8988825, 3.3903675, 1.061517, 0.16906822, 6.7335787, 1.061517)
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vnf7w"]
 points = PackedVector3Array(0.5153631, -0.18509774, 0.71601427, 0.4001504, -0.30045718, -0.43712854, 0.5153631, -0.30045718, -0.43712854, 0.28480226, 0.27611428, -0.32176912, 0.74596906, -0.06973829, -0.32176912, 0.28480226, -0.30045718, 0.71601427, 0.4001504, 0.27611428, 0.48529541, 0.74596906, -0.30045718, 0.024196304, 0.6306661, 0.16075484, 0.024196304, 0.28480226, -0.30045718, -0.32176912, 0.5153631, 0.27611428, -0.32176912, 0.28480226, 0.27611428, 0.48529541, 0.74596906, -0.06973829, 0.024196304, 0.74596906, -0.30045718, -0.32176912, 0.5153631, -0.30045718, 0.71601427, 0.5153631, 0.27611428, 0.25468943, 0.5153631, -0.18509774, -0.43712854)
 
@@ -45,37 +42,32 @@ surface_material_override/1 = ExtResource("2_350fk")
 collision_layer = 4
 collision_mask = 3
 
-[node name="Foliage" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1359935153]
-visible = false
-shape = SubResource("ConvexPolygonShape3D_ytgiv")
-disabled = true
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1681189503]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1681189503]
 shape = SubResource("ConvexPolygonShape3D_vnf7w")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=2067034704]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=2067034704]
 shape = SubResource("ConvexPolygonShape3D_60ne1")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1452325308]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1452325308]
 shape = SubResource("ConvexPolygonShape3D_d7iju")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=2095013580]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=2095013580]
 shape = SubResource("ConvexPolygonShape3D_m67jo")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=517771910]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=517771910]
 shape = SubResource("ConvexPolygonShape3D_toor6")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=323101539]
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" index="5" unique_id=323101539]
 shape = SubResource("ConvexPolygonShape3D_2lkid")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=788246474]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="StaticBody3D" index="6" unique_id=788246474]
 shape = SubResource("ConvexPolygonShape3D_w8qrq")
 
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" index="8" unique_id=585693696]
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="StaticBody3D" index="7" unique_id=585693696]
 shape = SubResource("ConvexPolygonShape3D_85ojm")
 
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" index="9" unique_id=930325739]
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="StaticBody3D" index="8" unique_id=930325739]
 shape = SubResource("ConvexPolygonShape3D_epskh")
 
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" index="10" unique_id=404480264]
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="StaticBody3D" index="9" unique_id=404480264]
 shape = SubResource("ConvexPolygonShape3D_1lo13")
