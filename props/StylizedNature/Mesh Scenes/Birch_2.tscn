@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://cwu1hc5pnivip" path="res://props/StylizedNature/Materials/MI_Bark_Birch.tres" id="1_4pwvr"]
 [ext_resource type="PackedScene" uid="uid://b3da5kpm712xt" path="res://props/StylizedNature/assets/Birch_2.gltf" id="1_8nmbk"]
 [ext_resource type="Material" uid="uid://bwdysyr0hqcb5" path="res://props/StylizedNature/Materials/MI_Leaves_Birch.tres" id="2_yg7uw"]
+[ext_resource type="ArrayOccluder3D" uid="uid://d04dbk36v8kmf" path="res://props/StylizedNature/Mesh Scenes/Birch_2.occ" id="4_f2nvi"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i201h"]
 points = PackedVector3Array(0.023492843, 3.5443058, -0.6739717, 0.23826268, 0.75313854, 0.39966732, -0.191277, 0.75313854, 0.39966732, 0.45303252, -0.535985, -0.45915982, 0.45303252, 4.618491, -0.029851347, -0.40604684, -0.535985, -0.24445304, -0.191277, 4.618491, -0.029851347, 0.45303252, -0.535985, 0.39966732, 0.45303252, 4.618491, -0.45915982, -0.191277, 4.618491, -0.45915982, -0.40604684, -0.535985, 0.18485543, -0.191277, -0.535985, -0.45915982, -0.40604684, 1.8273242, -0.029851347, 0.23826268, 4.4030485, -0.6739717, -0.40604684, 1.1830146, 0.18485543, -0.191277, -0.535985, 0.39966732, 0.45303252, -0.106108904, 0.39966732, 0.023492843, 4.4030485, -0.6739717, 0.23826268, 3.5443058, -0.6739717)
@@ -17,3 +18,6 @@ collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=546553716]
 shape = SubResource("ConvexPolygonShape3D_i201h")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." index="1" unique_id=1352427318]
+occluder = ExtResource("4_f2nvi")
