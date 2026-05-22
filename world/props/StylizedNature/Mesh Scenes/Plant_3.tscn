@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bwfht5e40j3kg"]
+
+[ext_resource type="Material" uid="uid://b43nm87c4l54o" path="res://world/props/StylizedNature/Materials/MI_Leaves.tres" id="1_eduuc"]
+[ext_resource type="PackedScene" uid="uid://dwgjysq1et8p3" path="res://world/props/StylizedNature/assets/Plant_3.gltf" id="1_oi4eo"]
+
+[node name="Plant_3" instance=ExtResource("1_oi4eo")]
+surface_material_override/0 = ExtResource("1_eduuc")

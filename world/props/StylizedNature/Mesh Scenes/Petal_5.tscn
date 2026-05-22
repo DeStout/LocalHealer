@@ -1,0 +1,41 @@
+[gd_scene format=4 uid="uid://dixpdgti45yas"]
+
+[ext_resource type="Material" path="res://Materials/MI_Flowers.tres" id="1_iuxk0"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k7van"]
+_surfaces = [{
+"aabb": AABB(-0.400947, 0.00104375, -0.419552, 0.833963, 0.288772, 0.795213),
+"format": 34896613377,
+"index_count": 45,
+"index_data": PackedByteArray("CwAAAA4ABwAAAAkAAgAAAAMADQAAAAIADAAAAAsAAwAAAAEADgAAAA8ACQAAAAgABAAAAAcADwAAAA0ACAAAAAoABQAAAAYACgAAAAwABgAAAAQAAQAAAAUA"),
+"name": "Flowers",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("EnwAAImHAAC4BmL/a1sAAEBabesAAAAAlUWy7uVFAAAYNqnsaPkAAAAA///3fgAAYTWY79GrAACtVanj//8AAPre+L0k9AAAvYlB1l3iAACE4469JtwAAKj5i7sKZwAAA9BlxWyXAADKiCretQkAAP//+LqGRQAAHKyk0n46AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ij0v8"]
+resource_name = "Petal_5_Plane_029"
+_surfaces = [{
+"aabb": AABB(-0.400947, 0.00104375, -0.419552, 0.833963, 0.288772, 0.795213),
+"attribute_data": PackedByteArray("noVHiJxk5K0oUhmEfWbilB+gy7J/bxm1JYZ4qN6mmqixtsZ2fKRIkliv6XF7iyxanpVkbxlcFHU3gWBTdHFUbw=="),
+"format": 34896613399,
+"index_count": 45,
+"index_data": PackedByteArray("CwAAAA4ABwAAAAkAAgAAAAMADQAAAAIADAAAAAsAAwAAAAEADgAAAA8ACQAAAAgABAAAAAcADwAAAA0ACAAAAAoABQAAAAYACgAAAAwABgAAAAQAAQAAAAUA"),
+"material": ExtResource("1_iuxk0"),
+"name": "Flowers",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("EnwAAImHcM64BmL/a1uNzkBabesAAA7IlUWy7uVF8csYNqnsaPmh4QAA///3fkfeYTWY79Gr5OatVanj//9C4Pre+L0k9AjVvYlB1l3ie+KE4469Jtw7w6j5i7sKZ7jKA9BlxWyXQ8fKiCretQkhvf//+LqGRSa/HKyk0n46arp5t/mhJrgbjhCyx5N4tjWI6b86mh+/0JIkwimSob6kqTq8Qq6NvwmtrrM9uK65ObeKt62856VPpo2ska21oLSo")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_k7van")
+
+[node name="Petal_52" type="Node3D"]
+
+[node name="Petal_5" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ij0v8")
+skeleton = NodePath("")

@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bwdysyr0hqcb5"]
+
+[ext_resource type="Shader" uid="uid://bq0aual07viyx" path="res://world/props/StylizedNature/Materials/M_Leaves.gdshader" id="1_pn6xr"]
+[ext_resource type="Texture2D" uid="uid://c7nytlmjhhr7r" path="res://world/props/StylizedNature/assets/Leaves_Birch.png" id="2_a8mml"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_pn6xr")
+shader_parameter/Leaf_Color = Color(0.45, 0.64, 0, 1)
+shader_parameter/Alpha = ExtResource("2_a8mml")
+shader_parameter/SSS_Color = Color(0.65, 0.7, 0, 1)
+shader_parameter/WindSpeed = 10.0
+shader_parameter/WindStrength = 0.1
+shader_parameter/SSS_Strength = 2.0
+shader_parameter/SSS_Blend = 0.2
+shader_parameter/GlobalVariation = true
