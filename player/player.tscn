@@ -58,7 +58,7 @@ shape = SubResource("CapsuleShape3D_bcb6e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.425, 0)
 
 [node name="Camera" type="Camera3D" parent="AimHelper" unique_id=775769241]
-far = 1024.0
+far = 2048.0
 
 [node name="UI" type="Control" parent="AimHelper/Camera" unique_id=1104802411 node_paths=PackedStringArray("fps_label")]
 layout_mode = 3
